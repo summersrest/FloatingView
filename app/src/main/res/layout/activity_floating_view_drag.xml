@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sum.simple.SimpleRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_divider_color="#EFEFEF"
+        app:rv_divider_size="1dp" />
+
+    <com.sum.floatingView.FloatingViewDrag
+        android:id="@+id/floating_view_drag"
+        app:dv_margin="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_reserve" />
+    </com.sum.floatingView.FloatingViewDrag>
+
+    <com.sum.floatingView.DragView
+        android:id="@+id/drag"
+        app:dv_margin="60dp"
+        app:dv_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_reserve" />
+    </com.sum.floatingView.DragView>
+</FrameLayout>
